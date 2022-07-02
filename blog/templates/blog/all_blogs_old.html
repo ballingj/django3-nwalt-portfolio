@@ -1,0 +1,15 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+
+    <h1>Jeff's Blog Page</h1>
+    <h2>Jeff has written {{ blogs.count }} blog{{ blogs.count|pluralize }}</h2> <!-- pluralize  no 's' if single | 's' if plural -->
+
+    <!-- {{ blogs }}  out: <QuerySet [<Blog: Blog object (1)>, <Blog: Blog object (2)>, <Blog: Blog object (3)>]>  --> 
+
+    {% for blog in blogs %}
+        <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
+        <p>{{ blog.date_published|date:'M d Y' }}</p> <!-- formatting date : see documentations -->
+        <p>{{ blog.description|striptags|truncatechars:100 }}</p>  <!-- formatting output: striptags (removes html tags) truncatechars (limits output -- see documentations -->
+    {% endfor %}
+
+{% endblock %}
