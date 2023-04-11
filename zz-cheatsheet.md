@@ -41,7 +41,7 @@ django-admin help
 ```
 ### start a project
 ```sh
-django-admin startproject <name_of_project>
+django-admin startproject name_of_project
 ```
 
 ### Ex:  start a project 'project_name' in current directory
@@ -61,7 +61,7 @@ install pylint
 ```
 ### add the first app in current project
 ```sh
-python manage.py startapp <name_of_app>
+python manage.py startapp name_of_app
 ```
 ### Ex: add "app_name" app 
 ```sh
@@ -118,4 +118,9 @@ python manage.py createsuperuser
 ### Change password for user 
 ```sh
 python manage.py changepassword username
+```
+
+### Collecting Static Files Into One Folder
+```sh
+python3 manage.py collectstatic
 ```

@@ -10,4 +10,4 @@ class Project(models.Model):
 
     def __str__(self):
         """ displays the title as an object in the Admin Page instead of 'Project object (n)' """
-        return self.title
+        return str(self.title)

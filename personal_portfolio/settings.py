@@ -123,7 +123,7 @@ STATIC_ROOT = BASE_DIR / 'static'
 # defines where in the url the media are accessed
 # example: http://127.0.0.1:8000/media/portfolio/images/image_file.jpg
 
-MEDIA_URL = '/media/'    
+MEDIA_URL = '/media/'
 # Define where to store the media files - hint copy
 # the same BASE_DIR location for the DATABASES and name as 'media' or something else
 MEDIA_ROOT = BASE_DIR / 'media'
